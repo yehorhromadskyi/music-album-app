@@ -11,19 +11,17 @@ using Android.Views;
 using Android.Widget;
 using MusicAlbumApp.Core.ViewModels;
 using MvvmCross.Droid.Support.V7.AppCompat;
-using MvvmCross.Droid.Support.V7.RecyclerView;
-using MvvmCross.Platforms.Android.Views;
 
 namespace MusicAlbumApp.Droid.Activities
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    public class AlbumsActivity : MvxAppCompatActivity<AlbumsViewModel>
+    [Activity(Theme = "@style/AppTheme.NoActionBar")]
+    public class AlbumDetailsActivity : MvxAppCompatActivity<AlbumDetailsViewModel>
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            SetContentView(Resource.Layout.albums_activity);
+            SetContentView(Resource.Layout.album_details);
         }
     }
 }

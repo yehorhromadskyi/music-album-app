@@ -57,6 +57,7 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\AlbumDetailsActivity.cs" />
     <Compile Include="Activities\AlbumsActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MainApplication.cs" />
@@ -132,6 +133,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\album_view.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\album_details.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

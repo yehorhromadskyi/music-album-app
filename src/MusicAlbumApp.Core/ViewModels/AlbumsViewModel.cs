@@ -1,6 +1,8 @@
 ﻿using MusicAlbumApp.Core.Models;
 using MusicAlbumApp.Core.Services;
+using MvvmCross.Commands;
 using MvvmCross.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -12,6 +14,8 @@ namespace MusicAlbumApp.Core.ViewModels
 
         private List<Album> _albums;
         private bool _isBusy;
+
+        public MvxCommand<Album> ShowAlbumDetailsCommand { get; private set; }
 
         public List<Album> Albums
         {
@@ -28,6 +32,13 @@ namespace MusicAlbumApp.Core.ViewModels
         public AlbumsViewModel(IAlbumsApiService albumsApiService)
         {
             _albumsApiService = albumsApiService;
+
+            ShowAlbumDetailsCommand = new MvxCommand<Album>(ShowAlbumDetails);
+        }
+
+        private void ShowAlbumDetails(Album album)
+        {
+            NavigationService.Navigate<AlbumDetailsViewModel, int>(album.Id);
         }
 
         public override async Task Initialize()

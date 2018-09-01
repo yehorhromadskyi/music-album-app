@@ -5,10 +5,10 @@ namespace MusicAlbumApp.Core.Models
     public class Album
     {
         [JsonProperty("userId")]
-        public long UserId { get; set; }
+        public int UserId { get; set; }
 
         [JsonProperty("id")]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         [JsonProperty("title")]
         public string Title { get; set; }
