@@ -11,11 +11,18 @@ namespace MusicAlbumApp.Core.ViewModels
         readonly IAlbumsApiService _albumsApiService;
 
         private List<Album> _albums;
+        private bool _isBusy;
 
         public List<Album> Albums
         {
             get => _albums;
             set => SetProperty(ref _albums, value);
+        }
+
+        public bool IsBusy
+        {
+            get => _isBusy;
+            set => SetProperty(ref _isBusy, value);
         }
 
         public AlbumsViewModel(IAlbumsApiService albumsApiService)
@@ -25,11 +32,15 @@ namespace MusicAlbumApp.Core.ViewModels
 
         public override async Task Initialize()
         {
+            IsBusy = true;
+
             var albums = await _albumsApiService.GetAlbumsAsync();
 
             Albums = albums;
 
             await base.Initialize();
+
+            IsBusy = false;
         }
     }
 }
