@@ -21,6 +21,13 @@
 
     <include layout="@layout/content_main" />
 
+	<MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
+		android:id="@+id/albumsRecyclerView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:MvxBind="ItemsSource Albums">
+	</MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView>
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
