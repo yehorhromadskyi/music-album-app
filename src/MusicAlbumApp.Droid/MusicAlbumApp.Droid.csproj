@@ -112,6 +112,9 @@
       <Version>4.3.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MusicAlbumApp.Core\MusicAlbumApp.Core.csproj">
@@ -121,6 +124,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\albums_activity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\album_view.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

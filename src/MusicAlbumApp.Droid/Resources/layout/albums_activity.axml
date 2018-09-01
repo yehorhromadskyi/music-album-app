@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
  	<MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
-		android:id="@+id/albumsRecyclerView"
+		android:id="@+id/albums_recycler"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		app:MvxBind="ItemsSource Albums">
-	</MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView>
+		local:MvxItemTemplate="@layout/album_view" 
+		local:MvxBind="ItemsSource Albums" />
 
 </LinearLayout>

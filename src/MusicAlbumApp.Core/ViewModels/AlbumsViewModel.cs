@@ -1,13 +1,8 @@
-﻿using MvvmCross.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using MusicAlbumApp.Core.Models;
 using MusicAlbumApp.Core.Services;
+using MvvmCross.ViewModels;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using MusicAlbumApp.Core.Models;
-using System.Net.Http;
-using System.IO;
-using Newtonsoft.Json;
 
 namespace MusicAlbumApp.Core.ViewModels
 {

@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using MusicAlbumApp.Core.ViewModels;
 using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Droid.Support.V7.RecyclerView;
 using MvvmCross.Platforms.Android.Views;
 
 namespace MusicAlbumApp.Droid.Activities
